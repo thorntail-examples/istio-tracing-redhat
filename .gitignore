@@ -1,0 +1,7 @@
+.idea
+*.iml
+target
+.DS_Store
+audit.log
+.java-version
+openshift.local.clusterup
