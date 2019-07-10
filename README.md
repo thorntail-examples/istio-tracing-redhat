@@ -4,7 +4,7 @@ This example demonstrates distributed tracing of Thorntail applications in Istio
 
 ## Preparing Istio environment
 
-Here's a short howto for getting Istio up and running with mTLS enabled, based on Minishift and Maistra 0.10.
+Here's a short howto for getting Istio up and running with mTLS enabled, based on Minishift and Maistra 0.11.
 It assumes that Minishift version 1.33 is installed and works correctly.
 It also assumes that you can run the `oc` binary.
 
@@ -33,7 +33,7 @@ It also assumes that you can run the `oc` binary.
 - Configure the Minishift virtual machine so that Elasticsearch can run:
 
   ```bash
-  minishift ssh -- sudo sysctl vm.max_map_count=262144
+  minishift ssh -- "echo 'vm.max_map_count=262144' | sudo tee -a /etc/sysctl.conf && sudo sysctl -p"
   ```
 
 - Login as an admin:
